@@ -48,13 +48,13 @@ export async function getServerSideProps({ params, query }) {
   const id = params.id;
 
   const res = await fetch(
-    `http://api.themoviedb.org/3/tv/${id}?api_key=${api_key}`
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${api_key}`
   );
   const data = await res.json();
 
   // Get reviews
   const getReviews = await fetch(
-    `http://api.themoviedb.org/3/tv/${id}/reviews?api_key=${api_key}`
+    `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${api_key}`
   );
   const reviewData = await getReviews.json();
 

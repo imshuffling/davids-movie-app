@@ -13,7 +13,7 @@ export default function Home() {
 
   const fetchData = useCallback(async () => {
     const data = await fetch(
-      `http://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`
+      `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`
     );
 
     if (!data.ok) {
@@ -36,7 +36,7 @@ export default function Home() {
     setIsLoading(true);
 
     const searchWord = await fetch(
-      `http://api.themoviedb.org/3/search/multi/?query=${value}&api_key=${"a2d35d6f439927a840e5166ce031cd3d"}`
+      `https://api.themoviedb.org/3/search/multi/?query=${value}&api_key=${apiKey}`
     );
 
     const searchResult = await searchWord?.json();
