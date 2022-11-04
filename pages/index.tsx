@@ -36,7 +36,7 @@ export default function Home() {
     setIsLoading(true);
 
     const searchWord = await fetch(
-      `https://api.themoviedb.org/3/search/multi/?query=${value}&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/search/multi?query=${value}&api_key=${apiKey}`
     );
 
     const searchResult = await searchWord?.json();
