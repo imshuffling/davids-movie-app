@@ -59,7 +59,7 @@ export default function Home() {
             Quick search
           </label>
           <div className="mt-1 items-center">
-            <div>
+            <div className="relative">
               <input
                 type="text"
                 name="search"
